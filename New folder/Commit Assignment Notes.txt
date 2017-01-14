@@ -11,3 +11,21 @@ previously created branch into the master will likely need to be reviewed before
 
 While it sounds like I'm totally reiterating myself or spouting out nonsense, I tried to type this up in a way that it looks like I am
 actually thinking about it *because I am* and I also put this entire paragraph into a single commit to illustrate my point. 
+
+----------------
+Reiteration for Kyle's Clarification.
+
+MERGES can be done from Remote to Origin, Origin to remote, and Vice versa. Any merge is automatically treated like a Commit request, despite
+the fact you can't add comments to it.
+
+Merges do NOT remove the branch from the folder. Once you commit changes to master, you should probably clean up the old branch you were working on and/
+or delete it (depending on circumstance)
+
+While MERGE requests are treated as seperate instances, They still need to be Pushed to the cloud for proper collabaration. One who pushess his content is ready to have it
+be seen, and its possible several commits may come through at once once you "push" the data to the server (origin) from your Gitkraken client.
+
+Because of this, While we may not have to keep track of commits as much in future projects, It should be noted that if you DONT PUSH
+your files to the cloud, THEY CANNOT BE SEEN TO BE COLLABORATED ON, even if you had a clever or effective way of providing the particular
+function. Always PUSH what you do on gitkraken, because It will come through on the push with properly updated numbers
+
+To test this, I'm going to submit multipule commits before uploading the push to the server.
