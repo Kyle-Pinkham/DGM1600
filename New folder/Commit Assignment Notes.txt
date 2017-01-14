@@ -1,1 +1,13 @@
 Preparing to add notes about my current experience with merging...
+
+Currently, I've discovered that adding a new branch, or COMMITING merges to the branch, counts as a commit in and of itself in its own right.
+However, while doing a merge is always treated as a commit, you do NOT have the option to comment on it until afterword.
+This may be an oversight, however, Whatever branch you are working on will likely be its own... well. Branch. Of the master project in general.
+I.e., submitting a PUSH REQUEST to override the MASTER FOLDER is something you would want to make a review on before removing the contents of the master.
+This is proably designed so you dont accidentally do a forced-commit on changing a poorly programmed entry into the master file.
+
+Merge commits need to first be reviewed as a push request because of their potentially distructive nature. Any merge commits from a
+previously created branch into the master will likely need to be reviewed before the contents in their entirety are commited to the master folder.
+
+While it sounds like I'm totally reiterating myself or spouting out nonsense, I tried to type this up in a way that it looks like I am
+actually thinking about it *because I am* and I also put this entire paragraph into a single commit to illustrate my point. 
