@@ -1,7 +1,0 @@
-I am utilizing a test to see if multipule commits will come thorugh from a single push.
-
-Test part two, second commit.
-
-Test part three. Nothing has changed. When I push these too the master server, it should properly display three additional commits from the total.
-
-Adding screenshots of my recovery as seperate commits before I push and end the assignment.
