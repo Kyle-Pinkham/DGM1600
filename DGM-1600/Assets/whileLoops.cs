@@ -23,8 +23,17 @@ public class whileLoops : MonoBehaviour {
             break; }
                 else
                 {
-                    print(randomNum + "? That isn't the right number, you are looking for " + myNum + ".");
-                    counter++;
+
+                print(randomNum + "? That isn't the right number, you are looking for " + myNum + ".");
+                counter++;
+                if (randomNum < myNum)
+                    minVal = randomNum;
+                if (randomNum > myNum)
+                    maxVal = randomNum;
+
+
+                if (counter >= 600)
+                    break;
                 }
             
         }
