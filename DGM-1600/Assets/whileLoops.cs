@@ -7,14 +7,19 @@ public class whileLoops : MonoBehaviour {
     //public int maxBottles = 100;
     public bool gameOn = true;
     private int randomNum;
-    private int minVal = 1;
-    private int maxVal = 71;
-    private int myNum = 7;
+    public int minVal = 1;
+    public int maxVal = 71;
+    public int myNum = 7;
     private int counter = 0;
 
     // Create a random number generator with while loops
 
 	void Start () {
+        if (myNum >= maxVal || myNum <= minVal)
+        {
+            gameOn = false;
+            print("Seriously?");
+        }
         while (gameOn == true)
         {
             randomNum = Random.Range(minVal, maxVal);
