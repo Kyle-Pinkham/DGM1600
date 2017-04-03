@@ -1,16 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.UI;
 
 public class ZooButtonScript : MonoBehaviour {
     public string animal;
     public List<string> zooRoster = new List<string>();
+    public GameObject zooListtxt;
 
-    void start() {
+
+
+    void Start() {
         zooRoster.Add("Monkey");
         zooRoster.Add("Elephant");
         zooRoster.Add("Alligator");
     }
+
+    public void UpdateZooList() {
+        zooListtxt.GetComponent<Text>().text = ListPrint();
+    }
+
 
     public void AddAnimal() {
         if (animal != " ")  {
@@ -28,8 +38,12 @@ public class ZooButtonScript : MonoBehaviour {
         zooRoster.Clear();
     }
 
-    public void ListPrint() {
-        foreach (string item in zooRoster) { print(item); }
+    public string ListPrint() {
+        string temp = ""; 
+        foreach (string item in zooRoster) { temp += (" " + (item));
+            Debug.Log(item);
+        } 
+        return temp;
     }
      
     //Last line
