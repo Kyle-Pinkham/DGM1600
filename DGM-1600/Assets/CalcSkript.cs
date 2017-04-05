@@ -9,15 +9,15 @@ public class CalcSkript : MonoBehaviour {
     public float Num1;
     public float Num2;
     public float Result = 0;
-    public Text InNum1;
-    public Text InNum2;
+    public InputField InNum1;
+    public InputField InNum2;
     public Text resultNum;
 
 
     void Start() {
         resultNum = GameObject.Find("resultNum").GetComponent<Text>();
-        InNum1 = GameObject.Find("InNum1").GetComponent<Text>();
-        InNum2 = GameObject.Find("InNum2").GetComponent<Text>();
+        InNum1 = GameObject.Find("InNum1").GetComponent<InputField>();
+        InNum2 = GameObject.Find("InNum2").GetComponent<InputField>();
     }
 
     void FixedUpdate() {
