@@ -1,0 +1,15 @@
+Data Types:
+
+	int: One whole number
+	float: One number (any), 32-bit
+	double: One number (any), 64-bit
+	string: An arrangement of Alphanumeric Characters
+	bool: Assign a 1/0   or     True/False   value
+	
+Variables:
+
+	int : Assign a whole number variable	IE: int age = 6;
+	float : Assign a Number variable	IE: float measurement = 6.0;
+	double : Assign a Number variable	IE: float numBananas = 4.2;
+	string : Assign a Name variable	IE: name="DGM1600";
+	bool : Assign a True/False Value into a variable	IE:	fullMag= true;
