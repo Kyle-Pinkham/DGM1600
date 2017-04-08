@@ -22,7 +22,7 @@ public class RandomNumScript : MonoBehaviour {
 
 
             if (counter >= 100)
-            break;
+                break;
 
         }
 
