@@ -15,37 +15,32 @@ public class CalcSkript : MonoBehaviour {
 
 
     void Start() {
-        resultNum = GameObject.Find("resultNum").GetComponent<Text>();
-        InNum1 = GameObject.Find("InNum1").GetComponent<InputField>();
-        InNum2 = GameObject.Find("InNum2").GetComponent<InputField>();
+        
+
     }
 
-    void FixedUpdate() {
+    void Update() {
         resultNum.text = "" + Result.ToString();
-        InNum1.text = "" + Num1.ToString();
-        InNum2.text = "" + Num2.ToString();
+        //Num1.text = "" + InNum1.ToString();
+        //InNum2.text = "" + Num2.ToString();
 
     }
 
     public void ButtonAdd() {
-        print(Num1 + Num2);
-        Result = Num1 + Num2;
-
+        Result = (float.Parse(InNum1.text) + float.Parse(InNum2.text));
     }
 
     public void ButtonSub() {
-        print(Num1 - Num2);
-        Result = Num1 + Num2;
+        Result = (float.Parse(InNum1.text) - float.Parse(InNum2.text));
     }
 
     public void ButtonDiv() {
-        print(Num1 / Num2);
-        Result = Num1 / Num2;
+        Result = (float.Parse(InNum1.text) / float.Parse(InNum2.text));
     }
 
     public void ButtonMul() {
-        print(Num1 * Num2); 
-        Result = Num1 * Num2;
+        Result = (float.Parse(InNum1.text) * float.Parse(InNum2.text));
     }
+
 
 }
