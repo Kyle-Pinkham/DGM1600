@@ -6,6 +6,7 @@ public class RandomNumScript : MonoBehaviour {
 
     public float delay = 0.1f;
     public GameObject Circle;
+    public GUIContent Canvas;
 
     private float minVal = 0;
     private float maxVal = 100;
@@ -28,7 +29,7 @@ public class RandomNumScript : MonoBehaviour {
 
     }
     void Spawn() {
-        Instantiate(Circle, new Vector2(0, 0), Quaternion.identity);
+        Instantiate(Circle, new Vector2(0, 20), Quaternion.identity);
     }
 
 
