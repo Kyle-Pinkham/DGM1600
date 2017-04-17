@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class RandomNumScript : MonoBehaviour {
 
-    public float delay = 0.1f;
+    public float delay = 2.5f;
     public GameObject Circle;
     public GUIContent Canvas;
 
-    private float minVal = 0;
-    private float maxVal = 100;
+    public float minVal = 0;
+    public float maxVal = 100;
     private float randVal;
     private int counter = 0;
 
     void Start() {
         InvokeRepeating("Spawn", delay, delay);
+
     }
     void NumRandomizer() {
         while (true) {
             randVal = Random.Range(minVal, maxVal);
+            Debug.Log(randVal);
             counter++;
 
 
@@ -29,8 +31,11 @@ public class RandomNumScript : MonoBehaviour {
 
     }
     void Spawn() {
-        Instantiate(Circle, new Vector2(0, 20), Quaternion.identity);
+        Instantiate(Circle, new Vector2(Random.Range(-7,7), 10), Quaternion.identity);
     }
 
-
+    void OnCollisionEnter2D(Collision2D coll) {
+        Destroy(Circle);
+        Debug.Log("death");
+    }
 }

@@ -16,7 +16,6 @@ public class CalcSkript : MonoBehaviour {
 
     void Start() {
 
-
     }
 
     void Update() {
