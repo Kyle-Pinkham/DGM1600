@@ -7,11 +7,13 @@ public class RandomNumScript : MonoBehaviour {
     public float delay = 2.5f;
     public GameObject Circle;
     public GUIContent Canvas;
-
     public float minVal = 0;
     public float maxVal = 100;
+    public List<GameObject> Circles = new List<GameObject>(); 
+    
     private float randVal;
     private int counter = 0;
+
 
     void Start() {
         InvokeRepeating("Spawn", delay, delay);
@@ -31,11 +33,12 @@ public class RandomNumScript : MonoBehaviour {
 
     }
     void Spawn() {
-        Instantiate(Circle, new Vector2(Random.Range(-7,7), 10), Quaternion.identity);
+        Circles.Add(Instantiate(Circle, new Vector2(Random.Range(-7, 7), 10), Quaternion.identity));
+        print(Circles[0]);
+
     }
 
-    void OnCollisionEnter2D(Collision2D coll) {
-        Destroy(Circle);
-        Debug.Log("death");
+    void OnTriggerEnter2D() {
+        Circles.Remove(gameObject);
     }
 }
