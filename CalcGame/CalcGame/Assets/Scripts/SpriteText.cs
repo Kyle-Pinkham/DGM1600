@@ -19,18 +19,7 @@ public class SpriteText : MonoBehaviour {
         var spriteTransform = parent.transform;
         var text = GetComponent<TextMesh>();
         var pos = spriteTransform.position;
-        text.text = "hi";
+        text.text = "" + Random.Range(0, 101);
     }
-    void NumRandomizer() {
-        while (true) {
-            randVal = Random.Range(minVal, maxVal);
-            counter++;
 
-
-            if (counter >= 100)
-                break;
-
-        }
-
-    }
 }

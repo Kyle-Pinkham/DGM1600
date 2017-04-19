@@ -9,7 +9,7 @@ public class RandomNumScript : MonoBehaviour {
     public GUIContent Canvas;
     public float minVal = 0;
     public float maxVal = 100;
-    public List<GameObject> Circles = new List<GameObject>(); 
+
     
     private float randVal;
     private int counter = 0;
@@ -19,6 +19,11 @@ public class RandomNumScript : MonoBehaviour {
         InvokeRepeating("Spawn", delay, delay);
 
     }
+
+    void Update() {
+
+    }
+
     void NumRandomizer() {
         while (true) {
             randVal = Random.Range(minVal, maxVal);
@@ -33,12 +38,8 @@ public class RandomNumScript : MonoBehaviour {
 
     }
     void Spawn() {
-        Circles.Add(Instantiate(Circle, new Vector2(Random.Range(-7, 7), 10), Quaternion.identity));
-        print(Circles[0]);
+        Instantiate(Circle, new Vector2(Random.Range(-7, 7), 10), Quaternion.identity);
+        
 
-    }
-
-    void OnTriggerEnter2D() {
-        Circles.Remove(gameObject);
     }
 }
