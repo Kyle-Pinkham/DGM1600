@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestrcutionScript : MonoBehaviour {
 
-    private GameObject Circle;
+    public GameObject Circle;
 
 
     void Awake() {

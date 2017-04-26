@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpriteText : MonoBehaviour {
-    int counter = 0;
     float randVal;
     float minVal;
     float maxVal;

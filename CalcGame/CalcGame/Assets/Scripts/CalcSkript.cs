@@ -19,11 +19,8 @@ public class CalcSkript : MonoBehaviour {
     public Text resultNum;
     private bool buttonActiveChecker = true;
 
-    public AudioSource source;
-    public AudioClip simplePop;
 
     void Start() {
-
     }
 
     void Update() {
@@ -35,20 +32,22 @@ public class CalcSkript : MonoBehaviour {
         var circleList = GameObject.FindGameObjectsWithTag("Number");
 
         foreach (GameObject circle in circleList) {
-            var circleMesh = circle.GetComponent<TextMesh>();
-            if (circleMesh != null){
-                if (x == float.Parse(circleMesh.text)) {
-                    Destroy(circle.transform.parent.gameObject);
-                    result = true;
-
+           var circleMesh = circle.GetComponent<TextMesh>();
+            var audioFile = circle.GetComponent<AudioSource>();
+                if (circleMesh != null){
+                audioFile.Play();
+                        if (x == float.Parse(circleMesh.text)) {
+                            Destroy(circle.transform.parent.gameObject);
+                            result = true;
+                        }
                 }
-            }
 
         }
         return result;   
     }
 
     public void ButtonInactive(Button butt) {
+
         if (NumberChecker(Result)) {
             butt.interactable = false;
             if (addButton.interactable == false &&
