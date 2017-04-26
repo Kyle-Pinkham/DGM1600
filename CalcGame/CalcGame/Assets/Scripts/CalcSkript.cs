@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class CalcSkript : MonoBehaviour {
 
@@ -19,11 +20,21 @@ public class CalcSkript : MonoBehaviour {
     public Text score;
     public static int scoretracker = 0;
     private bool buttonActiveChecker = true;
+    public Text timer;
+    float timeLeft = 180;
     //Class variables Declared. Begin functions:
 
     void Update() {
         resultNum.text = "" + Result.ToString();
         score.text = "Score:" + scoretracker.ToString();
+        timer.text = "Time Left: " + timeLeft.ToString("#.00");
+        timeLeft -= (Time.deltaTime);
+        if (timeLeft < 0)
+            Gameend();
+    }
+
+    void Gameend() {
+        SceneManager.LoadScene("Scene3");
     }
 
     public static bool NumberChecker(float x) {

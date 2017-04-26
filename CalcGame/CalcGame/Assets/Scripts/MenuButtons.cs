@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButtons : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        SceneManager.LoadScene("Scene1");
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void PlayGame() {
-        SceneManager.LoadScene("Scene 2");
+        SceneManager.LoadScene("Scene2");
+    }
+
+    public void Gameend() {
+        SceneManager.LoadScene("Scene3");
+    }
+
+    public void PlayAgain() {
+        SceneManager.LoadScene("Scene1");
     }
 }
