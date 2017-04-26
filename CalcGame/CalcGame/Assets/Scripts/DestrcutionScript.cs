@@ -6,16 +6,16 @@ public class DestrcutionScript : MonoBehaviour {
 
     public GameObject Circle;
 
-    void start() {
-    }
 
     void OnTriggerEnter2D() {
-        var audioFile = Circle.GetComponentInChildren<AudioSource>();
-
-        Debug.Log(gameObject);
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer r in renderers)
+            r.enabled = false;
+        AudioSource audioFile = Circle.GetComponentInChildren<AudioSource>();
         audioFile.Play();
-        Object.Destroy(gameObject);
-
+        Object.Destroy(gameObject, 0.75f);
         Debug.Log("death");
     }
+
+    
 }
