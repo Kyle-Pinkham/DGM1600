@@ -1,0 +1,1 @@
+Until I learn how to do it, This game must be played at 1440x900 Resulotion or it gets wonky. 
