@@ -6,13 +6,14 @@ public class DestrcutionScript : MonoBehaviour {
 
     public GameObject Circle;
 
-
-    void Awake() {
+    void start() {
     }
 
     void OnTriggerEnter2D() {
-        Debug.Log(gameObject);
+        var audioFile = Circle.GetComponentInChildren<AudioSource>();
 
+        Debug.Log(gameObject);
+        audioFile.Play();
         Object.Destroy(gameObject);
 
         Debug.Log("death");
