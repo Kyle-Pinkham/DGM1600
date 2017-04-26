@@ -13,7 +13,7 @@ public class DestrcutionScript : MonoBehaviour {
             r.enabled = false;
         AudioSource audioFile = Circle.GetComponentInChildren<AudioSource>();
         audioFile.Play();
-        Object.Destroy(gameObject, 0.75f);
+        Object.Destroy(gameObject, 0.5f);
         Debug.Log("death");
     }
 
