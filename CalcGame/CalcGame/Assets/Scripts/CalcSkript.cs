@@ -19,6 +19,9 @@ public class CalcSkript : MonoBehaviour {
     public Text resultNum;
     private bool buttonActiveChecker = true;
 
+    public AudioSource source;
+    public AudioClip simplePop;
+
     void Start() {
 
     }
